@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-image: url("./background-money.jpg");
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+  padding: 30px 0;
+  padding-top: 60px;
+}
+
+.logo-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-text {
+  font-size: 40px;
+  text-shadow: 3px 3px 4px rgb(251, 252, 253);
+}
+
+.app-main {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.ctr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+
+  height: 50px;
+}
+
+.left-ctr-container {
+  display: flex;
+  margin: 0 auto;
+
+  -webkit-box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+  box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+  border-radius: 0px 50px 50px 0px;
+}
+
+.input {
+  width: 300px;
+  font-size: 24px;
+  font-style: italic;
+  padding: 10px;
+}
+
+::placeholder {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.selector {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 15px;
+  width: fit-content;
+}
+
+.count-button {
+  width: fit-content;
+  font-size: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.result-text {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1.5px 1px 4px rgb(200, 205, 242);
+
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 50px;
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+  box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
+}
+
+.footer {
+  background-color: gray;
+  color: white;
+
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

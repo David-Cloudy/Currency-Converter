@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Przelicznik walut Dawid Chmurzyński</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <img class="logo-image" src="https://cataas.com/cat" alt="logo" />
+      <h1 class="header-text">Przelicznik walut</h1>
+    </header>
+    <main class="app-main">
+      <div class="ctr-container">
+        <div class="left-ctr-container">
+          <form id="amount-form">
+            <input
+              class="input"
+              name="amount-input"
+              id="amount-input"
+              type="number"
+              min="0.01"
+              step="0.01"
+              required
+              placeholder="Wpisz kwotę"
+            />
+          </form>
+
+          <select class="selector" id="currency-selected">
+            <option value="EUR" id="eur">Euro</option>
+            <option value="USD" id="usd">Dolar amerykański</option>
+            <option value="CHF" id="chf">Frank szwajcarski</option>
+          </select>
+          <button class="count-button" id="count-button">Przelicz*</button>
+        </div>
+        <h2 class="result-text" id="result-wrapper">=</h2>
+      </div>
+    </main>
+    <footer class="footer">
+      *Kwoty przeliczane są na podstawie aktualnych średnich kursów walut obcych
+      opublikowanych przez Narodowy Bank Polski
+    </footer>
+    <script defer src="./main.js"></script>
+  </body>
+</html>
