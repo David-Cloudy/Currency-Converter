@@ -19,28 +19,28 @@
     </header>
     <main class="app-main">
       <div class="ctr-container">
-        <div class="left-ctr-container">
-          <form id="amount-form">
-            <input
-              class="input"
-              name="amount-input"
-              id="amount-input"
-              type="number"
-              min="0.01"
-              step="0.01"
-              required
-              placeholder="Wpisz kwotę"
-            />
-          </form>
-
-          <select class="selector" id="currency-selected">
+        <form class="form-counter" id="count-form">
+          <input
+            class="input"
+            name="amount"
+            id="amount-input"
+            type="number"
+            min="0.01"
+            step="0.01"
+            required
+            placeholder="Wpisz kwotę"
+          />
+          <select class="selector" name="currency" id="currency-selected">
             <option value="EUR" id="eur">Euro</option>
             <option value="USD" id="usd">Dolar amerykański</option>
             <option value="CHF" id="chf">Frank szwajcarski</option>
           </select>
-          <button class="count-button" id="count-button">Przelicz*</button>
-        </div>
-        <h2 class="result-text" id="result-wrapper">=</h2>
+          <button class="count-button" type="submit" id="count-button">
+            Przelicz*
+          </button>
+        </form>
+
+        <h2 class="result-text" id="result-wrapper"></h2>
       </div>
     </main>
     <footer class="footer">

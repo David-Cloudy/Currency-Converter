@@ -1,25 +1,25 @@
 "use strict";
 
-const countButton = document.getElementById("count-button");
-const currencySelected = document.getElementById("currency-selected");
-const amountInput = document.getElementById("amount-input");
+const countForm = document.getElementById("count-form");
 const resultWrapper = document.getElementById("result-wrapper");
 
-countButton.addEventListener("click", () => {
-  const currency = currencySelected.value;
+countForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const currency = event.target.currency.value;
 
   fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`)
     .then((response) => response.json())
     .then((data) => {
-      if (!data) {
+      if (!data?.rates?.length) {
         window.alert("Wystąpił błąd pobierania danych");
-      } else {
-        const rate = data.rates[0].mid;
-        const result = amountInput.value * rate;
-        resultWrapper.textContent = `${result.toFixed(2)} zł`;
+        return;
       }
+      const rate = data.rates[0].mid;
+      const result = event.target.amount.value * rate;
+      resultWrapper.textContent = `${result.toFixed(2)} zł`;
+      resultWrapper.style.display = "flex";
     })
-    .catch((error) => {
-      console.error(error);
+    .catch(() => {
+      window.alert("Wystąpił błąd pobierania danych");
     });
 });

@@ -46,8 +46,9 @@ body {
   height: 50px;
 }
 
-.left-ctr-container {
+.form-counter {
   display: flex;
+  gap: 0px;
   margin: 0 auto;
 
   -webkit-box-shadow: 13px 0px 29px -3px rgba(66, 68, 90, 1);
@@ -58,9 +59,11 @@ body {
 
 .input {
   width: 300px;
+  padding: 10px;
+
   font-size: 24px;
   font-style: italic;
-  padding: 10px;
+  text-shadow: 5px -5px 12px rgb(200, 205, 242);
 }
 
 ::placeholder {
@@ -73,10 +76,12 @@ body {
   padding-left: 10px;
   padding-right: 15px;
   width: fit-content;
+  height: 50px;
 }
 
 .count-button {
   width: fit-content;
+  height: 50px;
   font-size: 20px;
   padding-left: 16px;
   padding-right: 16px;
@@ -95,7 +100,7 @@ body {
   height: 50px;
   width: fit-content;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -111,7 +116,7 @@ body {
   background-color: gray;
   color: white;
 
-  height: 70px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
